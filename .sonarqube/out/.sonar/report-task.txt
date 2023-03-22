@@ -1,0 +1,6 @@
+projectKey=VVPS_UPR
+serverUrl=http://localhost:9000
+serverVersion=9.9.0.65466
+dashboardUrl=http://localhost:9000/dashboard?id=VVPS_UPR
+ceTaskId=AYcKn4ucIV-KHWPWIpLo
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYcKn4ucIV-KHWPWIpLo

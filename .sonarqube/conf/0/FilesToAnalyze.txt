@@ -1,0 +1,11 @@
+﻿C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\CardDiscounts.cs
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TimeDiscount.cs
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TrainReservation.cs
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TrainRoute.cs
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Program.cs
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\ReservationManager.cs
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\TimeDiscountManager.cs
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\TrainRouteManager.cs
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\bin\Debug\net6.0\config.json
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\bin\Debug\net6.0\trainRoutes.json
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\.gitignore

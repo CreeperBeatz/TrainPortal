@@ -1,0 +1,12 @@
+P
+GC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\CardDiscounts.csutf-8U
+LC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TimeDiscount.csutf-8Y
+PC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TrainReservation.csutf-8S
+JC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TrainRoute.csutf-8J
+AC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Program.csutf-8U
+LC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\ReservationManager.csutf-8V
+MC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\TimeDiscountManager.csutf-8T
+KC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\TrainRouteManager.csutf-8m
+bC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\obj\Debug\net6.0\VVPS_UPR.GlobalUsings.g.csutf-8Å
+vC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8k
+`C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\obj\Debug\net6.0\VVPS_UPR.AssemblyInfo.csutf-8

@@ -10,19 +10,11 @@ namespace VVPS_UPR
     public class TimeDiscountManager
     {
 
-        public List<TimeDiscount> _timeDiscounts { get; private set; }
+        public List<TimeDiscount> TimeDiscounts { get; private set; }
 
-        public TimeDiscountManager(List<Dictionary<string, object>> config_time_discounts)
+        public TimeDiscountManager(List<TimeDiscount> config_time_discounts)
         {
-            _timeDiscounts = new List<TimeDiscount> { };
-
-            foreach(Dictionary<string, object> discount_period in config_time_discounts) { 
-                var _from = DateTime.Parse((string)discount_period["from"]);
-                var _to = DateTime.Parse((string)discount_period["to"]);
-                var _discount = decimal.Parse(discount_period["discount"].ToString());
-
-                _timeDiscounts.Add(new TimeDiscount(_from, _to, _discount));
-            }
+            TimeDiscounts = config_time_discounts;
         }
 
         public decimal calculatePriceTimeDiscounts(decimal base_price, DateTime ticket_start_time)
@@ -30,7 +22,7 @@ namespace VVPS_UPR
             decimal discount_rate = 0;
 
             // Check if current time falls within a discount period
-            foreach (var discount_period in _timeDiscounts)
+            foreach (var discount_period in TimeDiscounts)
             {
 
                 if (discount_period.isDiscounted(ticket_start_time))

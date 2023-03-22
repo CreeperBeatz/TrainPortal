@@ -30,7 +30,8 @@ namespace VVPS_UPR
             foreach (var discount_card in config_card_discounts)
             {
                 var card_name = (string)discount_card["name"];
-                var discount = decimal.Parse(discount_card["discount"].ToString());
+                decimal discount;
+                decimal.TryParse(discount_card["discount"].ToString(), out discount);
 
                 switch (card_name)
                 {

@@ -9,17 +9,14 @@ namespace VVPS_UPR
 {
     internal class Program
     {
-        static void Main(string[] args)
+        protected static void Main(string[] args)
         {
             try
             {
-                // TODO change to real config manager
                 var json_config = File.ReadAllText("config.json");
-                var config = JsonConvert.DeserializeObject<Dictionary<string, List<Dictionary<string, object>>>>(json_config);
-                var DISCOUNT_PERIODS = config["time_discounts"];
-                Console.WriteLine(DISCOUNT_PERIODS);
-                var CARD_DISCOUNTS = config["card_discounts"];
-                Console.WriteLine(CARD_DISCOUNTS);
+                var config = JsonConvert.DeserializeObject<Config>(json_config);
+
+                if (config == null) throw new ArgumentNullException("Config file couldn't be deserialized!");
 
                 // TOOD change from NOT hardcoded
                 decimal PRICE_PER_KILOMETER = 0.025M;
@@ -27,6 +24,8 @@ namespace VVPS_UPR
                 //Load train routes json
                 var json_train_routes = File.ReadAllText("trainRoutes.json");
                 var deserialized_train_routes = JsonConvert.DeserializeObject<List<TrainRoute>>(json_train_routes);
+                if (deserialized_train_routes == null) throw new ArgumentNullException("Config file couldn't be deserialized!");
+
                 var trainRouteManager = new TrainRouteManager(deserialized_train_routes, PRICE_PER_KILOMETER);
 
                 // Reservation input dummy info
@@ -36,8 +35,8 @@ namespace VVPS_UPR
                 var card = DiscountCards.FamilyCard;
 
                 // Calculate final price
-                TimeDiscountManager timeDiscounts = new TimeDiscountManager(DISCOUNT_PERIODS);
-                CardDiscounts cardDiscounts = new CardDiscounts(CARD_DISCOUNTS);
+                TimeDiscountManager timeDiscounts = new TimeDiscountManager(config.TimeDiscounts);
+                CardDiscounts cardDiscounts = new CardDiscounts(config.DiscountCards);
                 
                 var finalPrice = timeDiscounts.calculatePriceTimeDiscounts(base_price, trainRoute.DepartureTime);
                 finalPrice = cardDiscounts.calculatePriceCardDiscount(card, age, finalPrice);
@@ -51,10 +50,13 @@ namespace VVPS_UPR
                 reservationManager.AddReservation(ticket);
 
                 Console.WriteLine("Train ticket reservation added successfully.");
+                reservationManager.CancelReservation(ticket);
+                Console.WriteLine("train reservation added successfully");
             }
             catch (FileNotFoundException ex)
             {
                 Console.WriteLine("Config files doesn't exist in current directory!");
+                Console.WriteLine(ex.Message);
             }
         }
 

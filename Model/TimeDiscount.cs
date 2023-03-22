@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,11 @@ namespace VVPS_UPR.Model
 {
     public class TimeDiscount
     {
+        [JsonProperty("from")]
         public DateTime From { get; set; }
+        [JsonProperty("to")]
         public DateTime To { get; set; }
+        [JsonProperty("discount")]
         public decimal Discount { get; set; }
 
         public TimeDiscount(DateTime from, DateTime to, decimal discount)
