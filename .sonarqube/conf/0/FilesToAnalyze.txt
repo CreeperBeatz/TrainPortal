@@ -1,4 +1,5 @@
 ﻿C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\CardDiscounts.cs
+C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\Config.cs
 C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TimeDiscount.cs
 C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TrainReservation.cs
 C:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TrainRoute.cs

@@ -9,7 +9,7 @@ namespace VVPS_UPR
 {
     public class TrainRouteManager
     {
-        public List<TrainRoute> TrainRoutes;
+        public List<TrainRoute> TrainRoutes { get; private set; }
         public decimal PricePerKilometer { get; private set; }
         public TrainRouteManager(List<TrainRoute> trainRoutes, decimal pricePerKilometer) 
         {

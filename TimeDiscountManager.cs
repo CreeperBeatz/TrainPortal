@@ -19,18 +19,8 @@ namespace VVPS_UPR
 
         public decimal calculatePriceTimeDiscounts(decimal base_price, DateTime ticket_start_time)
         {
-            decimal discount_rate = 0;
-
-            // Check if current time falls within a discount period
-            foreach (var discount_period in TimeDiscounts)
-            {
-
-                if (discount_period.isDiscounted(ticket_start_time))
-                {
-                    discount_rate = discount_period.Discount;
-                    break;
-                }
-            }
+            var discount_period = TimeDiscounts.FirstOrDefault(x => x.isDiscounted(ticket_start_time));
+            decimal discount_rate = discount_period != null ? discount_period.Discount : 0;
 
             // Calculate discounted price
             var discounted_price = base_price * (1 - discount_rate);

@@ -7,16 +7,16 @@ using VVPS_UPR.Model;
 
 namespace VVPS_UPR
 {
-    internal class Program
+    internal static class Program
     {
-        protected static void Main(string[] args)
+        static void Main(string[] args)
         {
             try
             {
                 var json_config = File.ReadAllText("config.json");
                 var config = JsonConvert.DeserializeObject<Config>(json_config);
 
-                if (config == null) throw new ArgumentNullException("Config file couldn't be deserialized!");
+                if (config == null) throw new ArgumentException("Config file couldn't be deserialized!");
 
                 // TOOD change from NOT hardcoded
                 decimal PRICE_PER_KILOMETER = 0.025M;
@@ -24,7 +24,7 @@ namespace VVPS_UPR
                 //Load train routes json
                 var json_train_routes = File.ReadAllText("trainRoutes.json");
                 var deserialized_train_routes = JsonConvert.DeserializeObject<List<TrainRoute>>(json_train_routes);
-                if (deserialized_train_routes == null) throw new ArgumentNullException("Config file couldn't be deserialized!");
+                if (deserialized_train_routes == null) throw new ArgumentException("Config file couldn't be deserialized!");
 
                 var trainRouteManager = new TrainRouteManager(deserialized_train_routes, PRICE_PER_KILOMETER);
 

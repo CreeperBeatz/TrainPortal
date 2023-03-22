@@ -1,5 +1,6 @@
 P
-GC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\CardDiscounts.csutf-8U
+GC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\CardDiscounts.csutf-8O
+FC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\Config.csutf-8U
 LC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TimeDiscount.csutf-8Y
 PC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TrainReservation.csutf-8S
 JC:\Users\danim\Documents\ProgCSharp8\VVPS_UPR\VVPS_UPR\Model\TrainRoute.csutf-8J
